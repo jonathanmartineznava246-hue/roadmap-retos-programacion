@@ -1,29 +1,82 @@
-# #01 OPERADORES Y ESTRUCTURAS DE CONTROL
-> #### Dificultad: Fácil | Publicación: 02/01/24 | Corrección: 08/01/24
+# ===============================
+# OPERADORES EN PYTHON
+# ===============================
 
-## Ejercicio
+print("OPERADORES ARITMÉTICOS")
+a = 10
+b = 3
+print(a + b)    # suma
+print(a - b)    # resta
+print(a * b)    # multiplicación
+print(a / b)    # división
+print(a % b)    # residuo
 
-```
-/*
- * EJERCICIO:
- * - Crea ejemplos utilizando todos los tipos de operadores de tu lenguaje:
- *   Aritméticos, lógicos, de comparación, asignación, identidad, pertenencia, bits...
- *   (Ten en cuenta que cada lenguaje puede poseer unos diferentes)
- * - Utilizando las operaciones con operadores que tú quieras, crea ejemplos
- *   que representen todos los tipos de estructuras de control que existan
- *   en tu lenguaje:
- *   Condicionales, iterativas, excepciones...
- * - Debes hacer print por consola del resultado de todos los ejemplos.
- *
- * DIFICULTAD EXTRA (opcional):
- * Crea un programa que imprima por consola todos los números comprendidos
- * entre 10 y 55 (incluidos), pares, y que no son ni el 16 ni múltiplos de 3.
- *
- * Seguro que al revisar detenidamente las posibilidades has descubierto algo nuevo.
- */
-```
-#### Tienes toda la información extendida sobre el roadmap de retos de programación en **[retosdeprogramacion.com/roadmap](https://retosdeprogramacion.com/roadmap)**.
+print("\nOPERADORES DE COMPARACIÓN")
+print(a > b)
+print(a == b)
+print(a != b)
 
-Sigue las **[instrucciones](../../README.md)**, consulta las correcciones y aporta la tuya propia utilizando el lenguaje de programación que quieras.
+print("\nOPERADORES LÓGICOS")
+print(a > 5 and b < 5)
+print(a > 5 or b > 5)
+print(not a < 5)
 
-> Recuerda que cada semana se publica un nuevo ejercicio y se corrige el de la semana anterior en directo desde **[Twitch](https://twitch.tv/mouredev)**. Tienes el horario en la sección "eventos" del servidor de **[Discord](https://discord.gg/mouredev)**.
+print("\nOPERADORES DE ASIGNACIÓN")
+c = 5
+c += 2
+print(c)
+
+print("\nOPERADORES DE PERTENENCIA")
+lista = [1, 2, 3, 4]
+print(3 in lista)
+print(5 not in lista)
+
+print("\nOPERADORES DE IDENTIDAD")
+x = lista
+y = [1, 2, 3, 4]
+print(x is lista)
+print(x is y)
+
+print("\nOPERADORES A NIVEL DE BITS")
+d = 6
+e = 3
+print(d & e)
+print(d | e)
+
+
+# ===============================
+# ESTRUCTURAS DE CONTROL
+# ===============================
+
+print("\nCONDICIONAL IF")
+edad = 18
+if edad >= 18:
+    print("Mayor de edad")
+else:
+    print("Menor de edad")
+
+print("\nBUCLE FOR")
+for i in range(3):
+    print(i)
+
+print("\nBUCLE WHILE")
+contador = 0
+while contador < 3:
+    print(contador)
+    contador += 1
+
+print("\nEXCEPCIONES")
+try:
+    numero = 10 / 0
+except:
+    print("Error: división entre cero")
+
+
+# ===============================
+# DIFICULTAD EXTRA
+# ===============================
+
+print("\nNUMEROS DEL 10 AL 55")
+for num in range(10, 56):
+    if num % 2 == 0 and num != 16 and num % 3 != 0:
+        print(num)
